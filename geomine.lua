@@ -428,9 +428,13 @@ function main()
     -- scan
     cost = gs.cost(radius)
     if cost > turtle.getFuelLevel() then
-      log("not enough fuel!")
-      error("not enough fuel for scanning!")
+      if fuel_enderchest then
+        dorefuel()
+      else
       
+        log("not enough fuel!")
+        error("not enough fuel for scanning!")
+      end
     end
     local scan = gs.scan(radius)
     if scan ~= nil then
