@@ -4,6 +4,15 @@ I wrote this program to fully utilize a ComputerCraft Mining Turtle equiped with
 To use this program you need to have Computercraft, Advanced Peripherals and Ender Storage installed.
 
 You also need a Turtle equiped with a Pickaxe and an Advanced Peripherals Geo Scanner. The Turtle also need to have an Output Enderchest.
+
+## Features
+
+- Utilizes Geo Scanner to find Ores and mines them in *mostly* optimal path.
+- Outputs into provided Enderchest
+- Can be Fueled with an additional Fuel Enderchest
+- Logs position and can resume its task after a server reboot, being unloaded, etc.
+- Punches mobs standing in its way.
+- Can search for specific blocks.
 ## Usage
 The input parameters represent the starting position of the turtle.
 ```
@@ -14,7 +23,7 @@ e - East
 s - South
 w - West
 radius - the radius the turtle will scan and mine
-y - current y level")
+y - current y level
 search_ore - i will try to only search for *search_ore*
 ```
 
@@ -80,7 +89,7 @@ I was playing the All the Mods Modpack, so there are static references to some M
 
 
 ## Known Issues
-These Issues are known but i did not fix them yet.
+These Issues are known but i did not fix them yet. You may make pull requests ;)
 
 - The turtle only turns right to change its direction, calculating optimal turn direction could save time.
 - When encountering too many errors the turtle just crashes, perferably it would return home.
