@@ -13,6 +13,18 @@ You also need a Turtle equiped with a Pickaxe and an Advanced Peripherals Geo Sc
 - Logs position and can resume its task after a server reboot, being unloaded, etc.
 - Punches mobs standing in its way.
 - Can search for specific blocks.
+
+## Installation
+
+Simply run these commands on your turtle.
+```
+pastebin get ghZ9JAAg geomine.lua
+```
+
+```
+pastebin get xynMWeLF startup.lua
+```
+
 ## Usage
 The input parameters represent the starting position of the turtle.
 ```
