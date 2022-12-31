@@ -1,7 +1,5 @@
 -- startup.lua v1.0
 -- Author: Egobooster
--- 22-07-2022
--- startup script for fancymine.lua v1.0 https://pastebin.com/hnQYGiXX
 
 enabled = true
 if enabled then
@@ -31,7 +29,7 @@ if enabled then
         starting_y = c[3]
         search_ore = c[4]
 
-        shell.run("fancymine.lua",
+        shell.run("geomine.lua",
                 facing,
                 radius,
                 starting_y,

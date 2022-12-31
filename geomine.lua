@@ -1,8 +1,6 @@
--- fancymine.lua v1.0
+-- geomine.lua v1.0
 -- Author: Egobooster
--- 22-07-2022
 -- requires: Advanced Peripherals - GeoScanner
--- recommended: startup resume script:
 
 -- config
 ENDERCHEST_SLOT = 16
@@ -335,11 +333,11 @@ end
 
 -- Init
 emergency = false
-logfile = fs.open("fancymine.log","w")
+logfile = fs.open("geomine.log","w")
 facing = nil
 args = {...}
 if args[1] == nil or args[2] == nil or args[3] == nil then
-    print("fancymine <facing> <radius> <y> [search_ore]")
+    print("geomine <facing> <radius> <y> [search_ore]")
     print("facing:")
     print("n - North")
     print("e - East")
@@ -371,7 +369,7 @@ if args[5] ~= nil then
     log("going home!")
     moveTo(-x,-y,-z)
     setfacing(facing)
-    log("restarting fancymine with previous parameters")
+    log("restarting geomine with previous parameters")
   else
     gps = fs.open("gps.data","w")
     gps.write("")
