@@ -4,7 +4,7 @@
 
 -- config
 ENDERCHEST_SLOT = 16
-BEDROCK_Y_DEFAULT = 50
+BEDROCK_Y = -55
 MAXERROR = 15
 y_steps = 4
 search_ore = "_ore"
@@ -389,7 +389,7 @@ radius = tonumber(args[2])
 log("radius is: " .. radius)
 starting_y = tonumber(args[3])
 log("starting y level is: " .. starting_y)
-log("expecting bedrock at: " .. BEDROCK_Y_DEFAULT)
+log("expecting bedrock at: " .. BEDROCK_Y)
 if args[4] ~= nil then
     search_ore = args[4]
 end
@@ -469,7 +469,7 @@ function main()
     -- gehe zu ursprung - y_steps
     step = step +1
     local targety = 0 - y - (y_steps * step)
-    if (starting_y+targety+y) > (BEDROCK_Y_DEFAULT+radius) then
+    if (starting_y+targety+y) > (BEDROCK_Y+radius) then
       log("moving to next scan position")
       moveTo(-x,targety,-z)
       log("x: " .. x .. " y: " .. y .. " z: " .. z)
