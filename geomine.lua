@@ -331,6 +331,16 @@ function checkFuel()
   end
 end
 
+function dorefuel()
+  dumpInv()
+  log(FUEL_ENDERCHEST_SLOT)
+  turtle.select(FUEL_ENDERCHEST_SLOT)
+  turtle.placeUp()
+  turtle.suckUp(64)
+  turtle.refuel(64)
+  turtle.digUp()  
+end
+
 -- Init
 emergency = false
 logfile = fs.open("geomine.log","w")
