@@ -176,6 +176,13 @@ function moveDown(n)
 end
 
 function setfacing(d)
+
+  if (facing == "n" and d == "w") or (facing == "o" and d == "n") or (facing == "s" and d == "o") or (facing == "w" and d == "s") then
+    turtle.turnLeft()
+    savepos()
+    return
+  end   
+
   while facing ~= d do
     turtle.turnRight()
     if facing == "n" then
