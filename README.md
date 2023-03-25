@@ -103,6 +103,5 @@ I was playing the All the Mods Modpack, so there are static references to some M
 ## Known Issues
 These Issues are known but i did not fix them yet. You may make pull requests ;)
 
-- The turtle only turns right to change its direction, calculating optimal turn direction could save time.
 - When encountering too many errors the turtle just crashes, perferably it would return home.
 - The turtle does not take into account the amount of fuel a scan takes when calculating the required fuel to return home resulting in it not quite making it home.
