@@ -1,15 +1,13 @@
--- geomine.lua v1.0
 -- Author: Egobooster
--- requires: Advanced Peripherals - GeoScanner
 
 -- config
 ENDERCHEST_SLOT = 16
 BEDROCK_Y = -55
 MAXERROR = 15
+FUEL_ENDERCHEST_SLOT = 15
 y_steps = 4
 search_ore = "_ore"
 fuel_enderchest = false
-FUEL_ENDERCHEST_SLOT = 15
 unmineable_ores = {"allthemodium_ore","allthemodium_slate_ore","unobtainium_ore","vibranium_ore"}
 
 -- functions
