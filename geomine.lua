@@ -446,9 +446,18 @@ function main()
       if fuel_enderchest then
         dorefuel()
       else
-      
-        log("not enough fuel!")
-        error("not enough fuel for scanning!")
+        --try to refuel
+        for i = 1, 16 do -- loop through the slots
+          turtle.select(i) -- change to the slot
+          if turtle.refuel(0) then -- if it's valid fuel
+            turtle.refuel(turtle.getItemCount(i))
+          end
+        end
+        if cost > turtle.getFuelLevel() then
+          --in the future return home here
+          log("not enough fuel!")
+          error("not enough fuel for scanning!")
+        end
       end
     end
     local scan = gs.scan(radius)
