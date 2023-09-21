@@ -18,11 +18,11 @@ You also need a Turtle equiped with a Pickaxe and an Advanced Peripherals Geo Sc
 
 Simply run these commands on your turtle.
 ```
-pastebin get 5iHAJG9B geomine.lua
+pastebin get Ep37cNTd geomine.lua
 ```
 
 ```
-pastebin get zNvqfZic startup.lua
+pastebin get HtjG5u4M startup.lua
 ```
 
 ## Usage
