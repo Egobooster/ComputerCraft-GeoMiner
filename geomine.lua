@@ -175,26 +175,35 @@ end
 
 function setfacing(d)
 
-  if (facing == "n" and d == "w") or (facing == "o" and d == "n") or (facing == "s" and d == "o") or (facing == "w" and d == "s") then
-    turtle.turnLeft()
-    savepos()
-    return
-  end   
-
-  while facing ~= d do
-    turtle.turnRight()
-    if facing == "n" then
-      facing = "e"
-    elseif facing == "e" then
-      facing = "s"
-    elseif facing == "s" then
-      facing = "w"
-    elseif facing == "w" then
-      facing = "n"
+    if (facing == "n" and d == "w") or (facing == "o" and d == "n") or (facing == "s" and d == "o") or (facing == "w" and d == "s") then
+      turtle.turnLeft()
+      if facing == "n" then
+        facing = "w"
+      elseif facing == "o" then
+        facing = "n"
+      elseif facing == "s" then
+        facing = "o"
+      elseif facing == "w" then
+        facing = "s"
+      end
+      savepos()
+      return
+    end   
+  
+    while facing ~= d do
+      turtle.turnRight()
+      if facing == "n" then
+        facing = "e"
+      elseif facing == "e" then
+        facing = "s"
+      elseif facing == "s" then
+        facing = "w"
+      elseif facing == "w" then
+        facing = "n"
+      end
+      savepos()
     end
-    savepos()
   end
-end
 
 function moveDirection(n,f)
   setfacing(f)
